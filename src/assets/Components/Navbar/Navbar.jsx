@@ -18,10 +18,10 @@ function Navbar() {
         <NavLink to="/about" className="nav-item" onClick={() => setIsMobile(false)}>About</NavLink>
         <NavLink to="/contact" className="nav-item" onClick={() => setIsMobile(false)}>Contact</NavLink>
         
-        <a href="https://t.me/abdurahmon_9506" 
+        {/* <a href="https://t.me/abdurahmon_9506" 
            target="_blank" 
            rel="noopener noreferrer" 
-           className="talk mobile-talk">LET'S TALK</a>
+           className="talk mobile-talk">LET'S TALK</a> */}
       </div>
 
       <a href="https://t.me/abdurahmon_9506" 

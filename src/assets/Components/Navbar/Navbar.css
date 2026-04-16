@@ -4,7 +4,6 @@
     list-style: none;
     text-decoration: none;
     color: white;
-    overflow: hidden;
 }
 .logo{
     font-family: Inter;
@@ -32,7 +31,7 @@ text-transform: uppercase;
     display: flex;
     gap: 150px;
     padding: 15px 20px;
-    /* position: fixed; */
+    position: fixed;
 }
 .talk {
     display: inline-block;
@@ -49,67 +48,60 @@ text-transform: uppercase;
   .talk:hover {
     background-color: #86acec;
   }
+  
+  @media screen and (max-width: 850px) {
+    .hamburger {
+        display: flex; /* Mobil versiyada ko'rinadi */
+    }
 
-/* Mobil qurilmalar uchun (768px gacha) */
-@media screen and (max-width: 768px) {
-    .navbar {
-        width: 100%;
-        justify-content: space-between; /* Elementlarni ikki chetga suradi */
-        gap: 0;
-        background-color: #1a1a1a; /* Mobil menyu orqa foni */
-        box-sizing: border-box;
+    .desktop-talk {
+        display: none; /* Desktop tugmani yashiramiz */
     }
 
     .nav-links {
-        position: absolute;
-        top: 60px; /* Navbar balandligiga qarab */
-        right: -100%; /* Dastlab menyu o'ng tomonda yashirin turadi */
-        flex-direction: column;
-        background-color: #1a1a1a;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Dastlab yashirin */
         width: 100%;
         height: 100vh;
-        gap: 30px;
-        padding-top: 50px;
-        transition: 0.4s ease-in-out;
-        text-align: center;
+        background-color: #020e1f;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        z-index: 1000;
     }
 
-    /* Menyu bosilganda ochiladigan klass */
+    /* Menyu ochilganda */
     .nav-links.active {
         right: 0;
     }
 
-    /* Hamburger tugmasi dizayni */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
+    .nav-item {
+        font-size: 24px;
     }
 
-    .hamburger span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background-color: white;
-        transition: 0.3s;
+    /* Hamburger X animatsiyasi (React-dagi klasslarga mos) */
+    .bar1 {
+        transform: translateY(9px) rotate(45deg);
     }
 
-    /* Hamburger "X" shakliga kirishi uchun */
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active span:nth-child(2) {
+    .bar2 {
         opacity: 0;
+        transform: translateX(-20px);
     }
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+
+    .bar3 {
+        transform: translateY(-9px) rotate(-45deg);
     }
 }
 
-/* Katta ekranlarda hamburgeni yashirish */
-@media screen and (min-width: 769px) {
-    .hamburger {
-        display: none;
+/* Kichik telefonlar uchun */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 16px;
+    }
+    
+    .navbar {
+        padding: 10px 15px;
     }
 }
