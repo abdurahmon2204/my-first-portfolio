@@ -1,0 +1,129 @@
+*{
+    background-color:#020e1f;
+}
+.home-page{
+    padding: 20px 80px;
+    background-color:#020e1f;
+}
+.home-page h2{
+    background-color:#020e1f;
+}
+h2{
+    color: aliceblue;
+    background-color:#020e1f;
+}
+.fullname{
+    font-size: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;
+    background-color:#020e1f;
+}
+.name{
+    color: #4D8EFF;
+}
+.architect{
+    font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+background-color:#020e1f;
+font-size: 24px;
+color: #C2C6D6;
+width: 600px;
+}
+
+.home-buttons{
+    display: flex;
+    gap: 50px;
+    padding: 30px 0px;
+}
+.view{
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #002E6A;
+    background-color: #ADC6FF;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
+}
+.contact{
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #4a546d26;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
+}
+.age{
+    color: #FFFFFF;
+    font-size: 30px;
+    background-color: #131B2E;
+}
+.year{
+    color: #64748B;
+    font-size: 20px;
+    background-color: #131B2E;
+}
+.first{
+    padding: 20px 55px;
+    background-color: #131B2E;
+    width: 180px;
+}
+.about-me{
+    padding-top: 30px;
+    display: flex;
+    gap: 130px;
+}
+.featured{
+    color: #FFFFFF;
+    font-size: 50px;
+    display: flex;
+    background-color:#020e1f;
+    flex-direction: column;
+}
+.manifestos{
+    color: #98a0be;
+}
+.explore{
+    font-size: 20px;
+    color:#a5b4ca;
+}
+.all-feature{
+    display:flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+    align-items: center;
+}
+.clean{
+    color: #ADC6FF;
+    background-color:#020e1f;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+.code{
+    color: #FFFFFF;
+    padding: 10px 0px;
+    background-color:#020e1f;
+    font-size: 35px;
+}
+.should{
+    color: #94A3B8;
+    font-size: 20px;
+    padding: 10px 0px;
+    background-color:#020e1f;
+    width: 450px;
+}
+.all-second{
+    display: flex;
+    gap: 150px;
+}
+.second-second{
+    display: flex;
+    gap: 50px;
+    padding: 100px 0px;
+}
+.system{
+    padding: 100px 0px;
+}

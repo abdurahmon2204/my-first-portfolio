@@ -1,0 +1,125 @@
+/* ErrorPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+
+.error-container {
+    height: calc(100vh - 80px); /* Navbardan qolgan joyni to'ldiradi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Portfolio fon rangi */
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    perspective: 1000px; /* 3D effekt uchun zarur */
+}
+
+.error-content {
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s ease-out;
+}
+
+/* 404 Raqami uchun 3D uslub */
+.error-code {
+    font-size: 15rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -10px;
+    position: relative;
+    
+    /* Dastlabki 3D soya */
+    text-shadow: 
+        2px 2px 0px rgba(0, 210, 255, 0.3),
+        4px 4px 0px rgba(0, 210, 255, 0.2),
+        6px 6px 0px rgba(0, 210, 255, 0.1);
+    
+    /* Sichqoncha harakatiga qarab o'zgaruvchi transform (JS orqali boshqariladi) */
+    transition: transform 0.1s ease-out, text-shadow 0.1s ease-out;
+}
+
+/* Kichikroq ekrandagilar uchun raqam hajmini kamaytirish */
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 10rem;
+    }
+}
+
+/* Matn qismi */
+.error-message h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.error-message p {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* "Home"ga qaytish tugmasi (Portfolio uslubida) */
+.back-home-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #00d2ff;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 210, 255, 0.2);
+}
+
+.back-home-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 210, 255, 0.5);
+}
+
+/* Orqa fondagi suzuvchi aylanalar (animatsiya) */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.1) 0%, rgba(58, 123, 213, 0.1) 100%);
+    animation: floatCircles 10s infinite linear;
+    z-index: -1;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -100px;
+    animation-duration: 15s;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -150px;
+    animation-duration: 20s;
+    animation-delay: -5s;
+}
+
+/* ANIMATSIYALAR */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatCircles {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50px) rotate(180deg); opacity: 0.5; }
+    100% { transform: translateY(0) rotate(360deg); }
+}

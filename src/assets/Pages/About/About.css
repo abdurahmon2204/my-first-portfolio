@@ -1,0 +1,124 @@
+/* About.css */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.about-header h1 span {
+    color: #00d2ff; /* Sizning asosiy ko'k rangingiz */
+}
+
+.lead-text {
+    color: #747070;
+    font-size: 1.1rem;
+    background-color:#041022;
+}
+
+
+/* Grid joylashuvi */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Kartochka uslubi */
+.about-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    line-height: 1.7;
+}
+.about-card p{
+    background-color: #111;
+
+}
+.about-card h3 {
+    background: #111;
+    color: #00d2ff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* O'ng tarafdagi kichik qutilar */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #111;
+    gap: 20px;
+}
+.skills-grid h4,p {
+    background-color: #111;
+
+}
+
+.skill-box {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    border-color: #00d2ff;
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: #00d2ff;
+    background: #111;
+    margin-bottom: 10px;
+}
+
+.skill-box h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.skill-box p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Pastki qism */
+.philosophy {
+    margin-top: 50px;
+    padding: 30px;
+    background: #111;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.philosophy h4 {
+    color: #00d2ff;
+    background: #111;
+    padding: 20px 0px;
+}
+
+/* Responsivlik (Telefonlar uchun) */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+}

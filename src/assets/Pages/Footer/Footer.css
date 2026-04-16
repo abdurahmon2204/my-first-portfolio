@@ -1,0 +1,73 @@
+.footer {
+    color: #ffffff;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    color: #00d2ff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    background-color:#020e1f;
+}
+.footer-brand p{
+    background-color:#020e1f;
+    
+}
+
+.footer-socials h4 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #bbb;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #00d2ff; /* Ikonkalar uchun neon rang */
+}
+
+/* Hover effekti */
+.social-item:hover {
+    color: #00d2ff;
+    transform: translateX(10px); /* O'ngga bir oz siljiydi */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.9rem;
+}
+.footer-bottom p{
+    background-color:#020f20;
+}
+
