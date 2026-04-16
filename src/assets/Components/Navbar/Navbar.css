@@ -4,6 +4,7 @@
     list-style: none;
     text-decoration: none;
     color: white;
+    overflow: hidden;
 }
 .logo{
     font-family: Inter;
