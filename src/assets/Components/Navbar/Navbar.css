@@ -33,14 +33,59 @@ text-transform: uppercase;
     padding: 15px 20px;
     position: fixed;
 }
-.talk{
- padding: 10px 20px ;
- background-color: #598fec;
- color: #002E6A;
- border-radius: 10px;
- border: none;
- cursor: pointer;
+.talk {
+    display: inline-block;
+    text-decoration: none; 
+    padding: 10px 20px;
+    background-color: #598fec;
+    color: #002E6A;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .talk:hover {
+    background-color: #86acec;
+  }
+
+
+  /* --- PLANSHEETLAR UCHUN (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 25px; /* Masofa planshetda qisqaradi */
+    }
+    .navbar {
+        padding: 15px 3%;
+    }
 }
-.talk:hover{
-    background-color:#86acec ;
+
+/* --- TELEFONLAR UCHUN (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Odatda telefonda menyu yashiriladi (Hamburger menyu uchun) */
+    }
+    
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 20px; /* Logo biroz kichrayadi */
+    }
+
+    /* Agar telefonda ham linklar ko'rinishini xohlasang, display:flex qilib, 
+       gap-ni juda kichik (masalan 10px) qilishing kerak. */
+}
+
+/* --- JUDA KICHIK TELEFONLAR UCHUN (max-width: 480px) --- */
+@media (max-width: 480px) {
+    .talk {
+        padding: 8px 15px; /* Tugma kichik ekranlarda sig'ishi uchun */
+        font-size: 14px;
+    }
+    
+    .logo-box span {
+        display: none; /* Agar logo yonida matn bo'lsa, uni yashirish mumkin */
+    }
 }

@@ -24,7 +24,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* 3. Yo'nalishlar (Skills) */}
         <div className="skills-grid">
           <div className="skill-box">
             <FaCode className="skill-icon" />
@@ -49,7 +48,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* 4. Manifest bo'limi */}
       <section className="philosophy">
         <div className="philosophy-item">
           <h4>My Mission</h4>

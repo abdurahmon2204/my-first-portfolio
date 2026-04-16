@@ -24,7 +24,7 @@
 .lead-text {
     color: #747070;
     font-size: 1.1rem;
-    background-color:#041022;
+    background-color:#020e1f;
 }
 
 
@@ -47,6 +47,9 @@
 .about-card p{
     background-color: #111;
 
+}
+.about-card b{
+    background-color: #111;
 }
 .about-card h3 {
     background: #111;

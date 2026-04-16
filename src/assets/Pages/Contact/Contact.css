@@ -78,6 +78,7 @@
 .detail-icon {
     font-size: 1.8rem;
     color: #00d2ff;
+    background: #111111;
 }
 
 .detail-card h4 {
@@ -90,6 +91,9 @@
 .detail-card p {
     color: #aaaaaa;
     font-size: 0.9rem;
+    background: #111111;
+}
+.detail-card-links{
     background: #111111;
 }
 
@@ -116,7 +120,7 @@
 }
 
 .social-links-row a:hover {
-    background: #00d2ff;
+    background: #408797;
     color: #000000;
     border-color: #00d2ff;
     transform: translateY(-5px);

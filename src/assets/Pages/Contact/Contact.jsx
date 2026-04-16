@@ -6,29 +6,24 @@ import './Contact.css';
 const Contact = () => {
   const form = useRef();
 
-  // EmailJS-ni Public Key bilan ishga tushirish (Sizning kalitingiz)
   useEffect(() => {
     emailjs.init("ABZ8xK61QlyJhnSkh");
   }, []);
 
-  // Inputlarni boshqarish uchun holat
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
     message: ''
   });
 
-  // Input o'zgarganda ma'lumotni saqlash
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Xabarni yuborish funksiyasi
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Koddagi barcha ID-lar sizniki bilan almashtirildi
     emailjs.sendForm(
       'service_lojhil5', 
       'template_h1x2nma', 
@@ -38,7 +33,6 @@ const Contact = () => {
         console.log("Muvaffaqiyatli:", result.text);
         alert("Xabaringiz muvaffaqiyatli yuborildi! ✅");
         
-        // MAYDONLARNI TOZALASH
         setFormData({
           user_name: '',
           user_email: '',
@@ -59,11 +53,10 @@ const Contact = () => {
         </header>
 
         <div className="contact-wrapper">
-          {/* Chap taraf: Aloqa ma'lumotlari */}
           <div className="contact-details">
             <div className="detail-card">
               <FaEnvelope className="detail-icon" />
-              <div>
+              <div className='detail-card-links'>
                 <h4>Email</h4>
                 <p>abdurahmonsobitjonov7@example.com</p>
               </div>
@@ -71,7 +64,7 @@ const Contact = () => {
 
             <div className="detail-card">
               <FaTelegram className="detail-icon" />
-              <div>
+              <div className='detail-card-links'>
                 <h4>Telegram</h4>
                 <p>@abdurahmon_9506</p>
               </div>
@@ -79,7 +72,7 @@ const Contact = () => {
 
             <div className="detail-card">
               <FaMapMarkerAlt className="detail-icon" />
-              <div>
+              <div className='detail-card-links'>
                 <h4>Manzil</h4>
                 <p>Chust, Namangan, O'zbekiston</p>
               </div>
@@ -92,7 +85,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* O'ng taraf: Ishlaydigan Forma */}
           <form className="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="input-group">
               <input 
