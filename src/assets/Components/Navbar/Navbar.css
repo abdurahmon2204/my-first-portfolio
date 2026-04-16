@@ -93,6 +93,9 @@ text-transform: uppercase;
     .bar3 {
         transform: translateY(-9px) rotate(-45deg);
     }
+    .talk{
+        display: block;
+    }
 }
 
 /* Kichik telefonlar uchun */
@@ -103,5 +106,8 @@ text-transform: uppercase;
     
     .navbar {
         padding: 10px 15px;
+    }
+    .talk{
+        display: block;
     }
 }
