@@ -16,7 +16,7 @@ function Navbar() {
                 <NavLink to="/about" className="nav-item">About</NavLink>
                 <NavLink to="/contact" className="nav-item">Contact</NavLink>
             </div>
-            <button className="talk">LET'S TALK</button>
+            <a href="https://t.me/abdurahmon_9506" target="_blank" rel="noopener noreferrer"  className="talk">LET'S TALK</a>
         </nav>
     </div>
   )
