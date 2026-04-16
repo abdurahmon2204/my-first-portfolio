@@ -127,3 +127,92 @@ width: 600px;
 .system{
     padding: 100px 0px;
 }
+
+
+
+@media screen and (max-width: 1024px) {
+    .home-page {
+        padding: 40px 40px;
+    }
+    .fullname {
+        font-size: 70px; 
+    }
+    .about-me {
+        gap: 50px;
+    }
+    .all-second {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .fullname {
+        font-size: 55px;
+    }
+    .architect {
+        width: 100%; /* Matn kengligi ekranga moslashadi */
+        font-size: 20px;
+    }
+    .about-me {
+        flex-direction: column; /* Info qutilari ustma-ust tushadi */
+        gap: 30px;
+    }
+    .all-feature {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .featured {
+        font-size: 38px;
+    }
+    .all-second, .second-second {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0;
+    }
+    .should {
+        width: 100%;
+    }
+    .system {
+        padding: 40px 0;
+    }
+}
+
+/* 3. Mobil telefonlar uchun (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .home-page {
+        padding: 20px 20px;
+    }
+    .fullname {
+        font-size: 40px; /* Telefon ekraniga mos ism o'lchami */
+        line-height: 1.2;
+    }
+    .home-buttons {
+        flex-direction: column; /* Tugmalar ustun shakliga o'tadi */
+        gap: 15px;
+    }
+    .view, .contact {
+        width: 100%; /* Tugmalar to'liq kenglikni egallaydi */
+        text-align: center;
+        font-size: 18px;
+    }
+    .first {
+        width: 100%; /* Age/Year qutilari to'liq kenglikka o'tadi */
+        padding: 20px;
+        text-align: center;
+    }
+    .code {
+        font-size: 26px;
+    }
+    .featured {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+    .home-page h2, .fullname, .architect, .featured, 
+    .clean, .code, .should {
+        background-color: transparent !important;
+    }
+}

@@ -193,11 +193,11 @@
     transform: translate(5px, -5px);
 }
 
-/* RESPONSIVLIK (Mobil qurilmalar uchun) */
+/* --- Contact Page Responsivlik --- */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .contact-wrapper {
-        grid-template-columns: 1fr; /* Ustunlarni bittaga tushiradi */
+        gap: 30px; /* Planshetlar uchun masofani biroz kamaytiramiz */
     }
     
     .contact-header h1 {
@@ -205,16 +205,64 @@
     }
 }
 
-@media (max-width: 600px) {
-    .contact-form {
-        padding: 25px;
+@media (max-width: 850px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Info va Forma ustunma-ustun tushadi */
     }
-    
+
+    .contact-header {
+        margin-bottom: 40px;
+    }
+
+    .detail-card:hover {
+        transform: translateX(0); /* Mobil qurilmada yon tomonga surilish noqulay bo'lishi mumkin */
+        transform: translateY(-5px); /* Buning o'rniga tepaga chiqaramiz */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 60px 15px; /* Kichikroq ekranlar uchun padding */
+    }
+
     .contact-header h1 {
         font-size: 2rem;
     }
-    
+
+    .contact-header p {
+        font-size: 0.95rem;
+    }
+
+    .contact-form {
+        padding: 25px 20px; /* Formaning ichki masofasi kichrayadi */
+    }
+
     .detail-card {
         padding: 15px;
+        gap: 15px;
     }
+
+    .detail-icon {
+        font-size: 1.5rem;
+    }
+
+    .social-links-row {
+        justify-content: center; /* Ijtimoiy tarmoqlar markazga suriladi */
+    }
+
+    .social-links-row a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .contact-submit-btn {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }

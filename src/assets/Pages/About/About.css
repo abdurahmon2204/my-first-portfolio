@@ -116,12 +116,73 @@
     padding: 20px 0px;
 }
 
-/* Responsivlik (Telefonlar uchun) */
-@media (max-width: 768px) {
+/* --- Responsivlik (Telefon va Planshetlar uchun) --- */
+
+@media (max-width: 992px) {
+    .about-container {
+        padding: 60px 30px;
+    }
     .about-grid {
-        grid-template-columns: 1fr;
+        gap: 20px;
     }
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        margin-bottom: 40px;
+    }
+
     .about-header h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* Sarlavha biroz kichrayadi */
     }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Ustunlar bittaga tushadi */
+    }
+
+    .about-card {
+        padding: 25px; /* Kichikroq ekranda joy tejash */
+    }
+
+    .skills-grid {
+        /* Juda kichik telefonlarda bitta, o'rtacha mobil qurilmada ikkita ustun */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 40px 15px; /* Yon tarafdagi bo'shliqlar kamayadi */
+    }
+
+    .about-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .skill-box {
+        padding: 15px;
+    }
+
+    .skill-icon {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Eng kichik ekranlarda hammasi bir qatorga tushadi */
+    }
+
+    .philosophy {
+        margin-top: 30px;
+        padding: 20px;
+    }
+}
+
+
+body {
+    overflow-x: hidden;
 }

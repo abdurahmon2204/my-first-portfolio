@@ -71,3 +71,57 @@
     background-color:#020f20;
 }
 
+/* --- Footer Responsivlik --- */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Elementlarni ustun shakliga o'tkazamiz */
+        align-items: center;    /* Markazga tekislash */
+        text-align: center;     /* Matnlarni markazga surish */
+        gap: 40px;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-item {
+        justify-content: center; /* Ikonka va matnni markazga yig'ish */
+    }
+
+    .social-item:hover {
+        transform: translateX(0) translateY(-5px); /* Mobil qurilmada yonga emas, tepaga siljish chiroyliroq */
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-item {
+        font-size: 1rem;
+    }
+}
+
+/* --- Qo'shimcha Visual Tozalash --- */
+/* Ba'zi brauzerlarda background-color inherit bo'lishi uchun */
+.footer-brand h3, 
+.footer-brand p, 
+.footer-bottom p {
+    background-color: transparent !important; /* Fon ranglari footer foni bilan bir xil bo'lishi uchun */
+}
