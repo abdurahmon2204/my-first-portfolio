@@ -1,113 +1,137 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
+    box-sizing: border-box;
+}
+
+a{
     text-decoration: none;
     color: white;
 }
-.logo{
-    font-family: Inter;
-font-weight: 700;
-font-style: Bold;
-font-size: 26px;
-vertical-align: middle;
-text-transform: uppercase;
 
-}
-.logo-box{
-    display:flex;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-}
-.nav-links{
-    display: flex;
-    gap:100px;
-    align-items: center;
-    text-decoration: none;
-}
-
+/* NAVBAR */
 .navbar{
     display: flex;
-    gap: 150px;
-    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 80px;
     position: fixed;
+    width: 100%;
+    background: #020e1f;
+    z-index: 1000;
 }
-.talk {
-    display: inline-block;
-    text-decoration: none; 
+
+/* LOGO */
+.logo-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: #002E6A;
+}
+
+/* NAV LINKS */
+.nav-links{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+/* BUTTON */
+.talk{
     padding: 10px 20px;
-    background-color: #598fec;
+    background: #598fec;
     color: #002E6A;
     border-radius: 10px;
-    border: none;
+    transition: 0.3s;
+}
+
+.talk:hover{
+    background: #86acec;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .talk:hover {
-    background-color: #86acec;
-  }
-  
-  @media screen and (max-width: 850px) {
-    .hamburger {
-        display: flex; /* Mobil versiyada ko'rinadi */
+    z-index: 1100;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* ANIMATION */
+.bar1{
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar2{
+    opacity: 0;
+}
+
+.bar3{
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ================= */
+/* 📱 RESPONSIVE */
+/* ================= */
+
+@media (max-width: 992px){
+    .nav-links{
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .hamburger{
+        display: block;
     }
 
-    .desktop-talk {
-        display: none; /* Desktop tugmani yashiramiz */
-    }
-
-    .nav-links {
+    .nav-links{
         position: fixed;
         top: 0;
-        right: -100%; /* Dastlab yashirin */
-        width: 100%;
+        right: -100%;
+        width: 70%;
         height: 100vh;
-        background-color: #020e1f;
+        background: #020e1f;
+
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 40px;
-        z-index: 1000;
+
+        transition: 0.4s ease;
     }
 
-    /* Menyu ochilganda */
-    .nav-links.active {
+    .nav-links.active{
         right: 0;
     }
 
-    .nav-item {
-        font-size: 24px;
-    }
-
-    /* Hamburger X animatsiyasi (React-dagi klasslarga mos) */
-    .bar1 {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .bar2 {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    .bar3 {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    .talk{
-        display: block;
+    /* LET'S TALK yashirinadi */
+    .desktop-talk{
+        display: none;
     }
 }
 
-/* Kichik telefonlar uchun */
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 16px;
+@media (max-width: 480px){
+    .nav-links{
+        width: 100%;
     }
-    
-    .navbar {
-        padding: 10px 15px;
-    }
-    .talk{
-        display: block;
+
+    .logo{
+        font-size: 18px;
     }
 }
