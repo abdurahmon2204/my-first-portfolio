@@ -1,138 +1,150 @@
-*{
+/* ===== BASE ===== */
+body{
     background-color:#020e1f;
 }
+
 .home-page{
     padding: 20px 80px;
-    background-color:#020e1f;
 }
-.home-page h2{
-    background-color:#020e1f;
-}
+
 h2{
     color: aliceblue;
-    background-color:#020e1f;
 }
+
+/* ===== HERO ===== */
 .fullname{
     font-size: 96px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px 0px;
-    background-color:#020e1f;
+    padding: 20px 0;
     color: #002E6A;
+    background-color: #020e1f;
 }
+
 .name{
     color: #4D8EFF;
 }
+
 .architect{
-    font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-background-color:#020e1f;
-font-size: 24px;
-color: #C2C6D6;
-width: 600px;
+    font-size: 24px;
+    color: #C2C6D6;
+    max-width: 600px;
+    background-color: #020e1f;
 }
 
+
+/* ===== BUTTONS ===== */
 .home-buttons{
     display: flex;
     gap: 50px;
-    padding: 30px 0px;
+    padding: 30px 0;
 }
+
 .view{
     border-radius: 10px;
     padding: 10px 20px;
     color: #002E6A;
-    background-color: #ADC6FF;
+    background: #ADC6FF;
     font-size: 20px;
     border: none;
-    cursor:pointer;
 }
+
 .contact{
     border-radius: 10px;
     padding: 10px 20px;
-    color: #FFFFFF;
-    background-color: #4a546d26;
+    color: #fff;
+    background: #4a546d26;
     font-size: 20px;
     border: none;
-    cursor:pointer;
 }
-.age{
-    color: #FFFFFF;
-    font-size: 30px;
-    background-color: #131B2E;
-}
-.year{
-    color: #64748B;
-    font-size: 20px;
-    background-color: #131B2E;
-}
-.first{
-    padding: 20px 55px;
-    background-color: #131B2E;
-    width: 180px;
-}
+
+/* ===== ABOUT ===== */
 .about-me{
     padding-top: 30px;
     display: flex;
     gap: 130px;
 }
+
+.first{
+    padding: 20px 40px;
+    background: #131B2E;
+    width: 180px;
+    
+}
+
+.age{
+    color: #fff;
+    font-size: 30px;
+    background-color: transparent;
+
+}
+
+.year{
+    color: #64748B;
+    font-size: 20px;
+    background-color: transparent;
+
+}
+
+/* ===== FEATURE ===== */
 .featured{
-    color: #FFFFFF;
+    color: #fff;
     font-size: 50px;
     display: flex;
-    background-color:#020e1f;
     flex-direction: column;
+    background-color: transparent;
 }
+
 .manifestos{
     color: #98a0be;
 }
+
 .explore{
     font-size: 20px;
     color:#a5b4ca;
 }
+
 .all-feature{
     display:flex;
     justify-content: space-between;
-    padding: 50px 0px;
+    padding: 50px 0;
     align-items: center;
 }
-.clean{
-    color: #ADC6FF;
-    background-color:#020e1f;
-    font-size: 18px;
-    padding: 10px 0px;
-}
-.code{
-    color: #FFFFFF;
-    padding: 10px 0px;
-    background-color:#020e1f;
-    font-size: 35px;
-}
-.should{
-    color: #94A3B8;
-    font-size: 20px;
-    padding: 10px 0px;
-    background-color:#020e1f;
-    width: 450px;
-}
+
+/* ===== SECOND ===== */
 .all-second{
     display: flex;
-    gap: 150px;
+    gap: 120px;
 }
+
 .second-second{
     display: flex;
     gap: 50px;
-    padding: 100px 0px;
-}
-.system{
-    padding: 100px 0px;
+    padding: 100px 0;
 }
 
+.clean{
+    color: #ADC6FF;
+    font-size: 18px;
+    background-color: transparent;
+}
 
+.code{
+    color: #fff;
+    font-size: 35px;
+    background-color: transparent;
+}
+
+.should{
+    color: #94A3B8;
+    font-size: 20px;
+    max-width: 450px;
+    background-color: transparent;
+}
 
 /* ======================= */
-/* 💻 LARGE SCREENS (1200px ↓) */
+/* 💻 1200px ↓ */
 /* ======================= */
 @media (max-width: 1200px){
     .fullname{
@@ -140,20 +152,20 @@ width: 600px;
     }
 
     .architect{
-        width: 500px;
-    }
-
-    .all-second{
-        gap: 80px;
+        max-width: 500px;
     }
 
     .about-me{
         gap: 80px;
     }
+
+    .all-second{
+        gap: 80px;
+    }
 }
 
 /* ======================= */
-/* 📱 TABLET (992px ↓) */
+/* 📱 992px ↓ */
 /* ======================= */
 @media (max-width: 992px){
 
@@ -166,7 +178,7 @@ width: 600px;
     }
 
     .architect{
-        width: 100%;
+        max-width: 100%;
         font-size: 20px;
     }
 
@@ -182,17 +194,16 @@ width: 600px;
 
     .second-second{
         flex-direction: column;
-        gap: 40px;
         padding: 60px 0;
     }
 
     .should{
-        width: 100%;
+        max-width: 100%;
     }
 }
 
 /* ======================= */
-/* 📱 MOBILE (768px ↓) */
+/* 📱 768px ↓ */
 /* ======================= */
 @media (max-width: 768px){
 
@@ -202,7 +213,6 @@ width: 600px;
 
     .fullname{
         font-size: 40px;
-        gap: 5px;
     }
 
     .architect{
@@ -232,14 +242,10 @@ width: 600px;
     .code{
         font-size: 28px;
     }
-
-    .should{
-        font-size: 18px;
-    }
 }
 
 /* ======================= */
-/* 📱 SMALL MOBILE (480px ↓) */
+/* 📱 480px ↓ */
 /* ======================= */
 @media (max-width: 480px){
 
@@ -265,6 +271,5 @@ width: 600px;
 
     .first{
         width: 100%;
-        padding: 15px;
     }
 }
