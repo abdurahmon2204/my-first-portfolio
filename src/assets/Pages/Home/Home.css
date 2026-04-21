@@ -1,12 +1,21 @@
-/* ===== BASE ===== */
+/* ===== GLOBAL FIX ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color:#020e1f;
+    overflow-x: hidden; /* 🔥 scroll bug fix */
 }
 
+/* ===== NAVBAR OFFSET FIX ===== */
 .home-page{
-    padding: 20px 80px;
+    padding: 120px 80px 40px; /* 🔥 navbar joy */
 }
 
+/* ===== TYPO ===== */
 h2{
     color: aliceblue;
 }
@@ -19,7 +28,8 @@ h2{
     gap: 10px;
     padding: 20px 0;
     color: #002E6A;
-    background-color: #020e1f;
+    word-break: break-word; /* 🔥 overflow fix */
+    background-color:#020e1f;
 }
 
 .name{
@@ -30,9 +40,8 @@ h2{
     font-size: 24px;
     color: #C2C6D6;
     max-width: 600px;
-    background-color: #020e1f;
+    background-color:#020e1f;
 }
-
 
 /* ===== BUTTONS ===== */
 .home-buttons{
@@ -41,50 +50,48 @@ h2{
     padding: 30px 0;
 }
 
-.view{
+.view, .contact{
     border-radius: 10px;
-    padding: 10px 20px;
-    color: #002E6A;
-    background: #ADC6FF;
+    padding: 12px 20px;
     font-size: 20px;
     border: none;
+    cursor: pointer;
+}
+
+.view{
+    color: #002E6A;
+    background: #ADC6FF;
 }
 
 .contact{
-    border-radius: 10px;
-    padding: 10px 20px;
     color: #fff;
     background: #4a546d26;
-    font-size: 20px;
-    border: none;
 }
 
 /* ===== ABOUT ===== */
 .about-me{
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
-    gap: 130px;
+    gap: 120px;
 }
 
 .first{
     padding: 20px 40px;
     background: #131B2E;
     width: 180px;
-    
+    border-radius: 10px;
 }
 
 .age{
     color: #fff;
-    font-size: 30px;
     background-color: transparent;
-
+    font-size: 30px;
 }
 
 .year{
     color: #64748B;
     font-size: 20px;
     background-color: transparent;
-
 }
 
 /* ===== FEATURE ===== */
@@ -115,25 +122,29 @@ h2{
 /* ===== SECOND ===== */
 .all-second{
     display: flex;
-    gap: 120px;
+    gap: 100px;
+    flex-wrap: wrap; /* 🔥 muhim fix */
 }
 
 .second-second{
     display: flex;
     gap: 50px;
     padding: 100px 0;
+    flex-wrap: wrap;
 }
 
 .clean{
     color: #ADC6FF;
     font-size: 18px;
     background-color: transparent;
+
 }
 
 .code{
     color: #fff;
-    font-size: 35px;
     background-color: transparent;
+
+    font-size: 35px;
 }
 
 .should{
@@ -141,12 +152,14 @@ h2{
     font-size: 20px;
     max-width: 450px;
     background-color: transparent;
+
 }
 
 /* ======================= */
 /* 💻 1200px ↓ */
 /* ======================= */
 @media (max-width: 1200px){
+
     .fullname{
         font-size: 70px;
     }
@@ -160,7 +173,7 @@ h2{
     }
 
     .all-second{
-        gap: 80px;
+        gap: 60px;
     }
 }
 
@@ -170,7 +183,7 @@ h2{
 @media (max-width: 992px){
 
     .home-page{
-        padding: 20px 40px;
+        padding: 110px 40px 40px;
     }
 
     .fullname{
@@ -189,7 +202,6 @@ h2{
 
     .all-second{
         flex-direction: column;
-        gap: 50px;
     }
 
     .second-second{
@@ -208,7 +220,7 @@ h2{
 @media (max-width: 768px){
 
     .home-page{
-        padding: 20px;
+        padding: 100px 20px 30px;
     }
 
     .fullname{
