@@ -175,6 +175,10 @@ h2{
     .all-second{
         gap: 60px;
     }
+    .override img{
+        width:300px;
+         
+    }
 }
 
 /* ======================= */
@@ -211,6 +215,10 @@ h2{
 
     .should{
         max-width: 100%;
+    }
+    .override img{
+        width:250px;
+         
     }
 }
 
@@ -254,6 +262,10 @@ h2{
     .code{
         font-size: 28px;
     }
+    .override img{
+        width:200px;
+         
+    }
 }
 
 /* ======================= */
@@ -283,5 +295,9 @@ h2{
 
     .first{
         width: 100%;
+    }
+    .override img{
+        width:180px;
+         
     }
 }

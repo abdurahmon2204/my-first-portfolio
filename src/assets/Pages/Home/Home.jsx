@@ -38,20 +38,20 @@ function Home() {
 
          <div className="all-second">
           <div className="second-first">
-            <div><img width={"400px"} height={"200px"} src="./image.png" alt="" /></div>
+            <div className='override'><img width={"400px"} height={"200px"} src="./image.png" alt="" /></div>
             <p className='clean'>Clean Code & Readability</p>
             <p className='code'>Code for Humans</p>
             <p className='should'>Code should not only be written for computers to execute but for humans to understand. My goal is to write clean, maintainable, and scalable code that any developer can easily build upon.</p>
           </div>
           <div className="second-first">
-            <div><img width={"400px"} height={"200px"} src="./hacking.png" alt="" /></div>
+            <div className='override'><img width={"400px"} height={"200px"} src="./hacking.png" alt="" /></div>
             <p className='clean'>User-Centric Philosophy</p>
             <p className='code'>User-First Approach</p>
             <p className='should'>Behind every complex backend system, there must be a simple and intuitive user experience. I believe technology should serve people by making their lives easier and more efficient.</p>
           </div>
          </div>
          <div className="second-second">
-            <div><img width={"500px"} height={"400px"} src="./override.png" alt="" /></div>
+            <div className='override'><img width={"500px"} height={"400px"} src="./override.png" alt="" /></div>
             <div className='system'>
              <p className='clean'>SYSTEM OVERRIDE</p>
              <p className='code'>Override the Ordinary</p>
